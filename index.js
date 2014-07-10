@@ -3,6 +3,7 @@
 var _ = require('lodash');
 var nex = require('nex-api');
 var proc = require('child_process');
+var log = require('npmlog');
 
 var handler = module.exports = new nex.Handler('globalDependencies');
 
@@ -11,7 +12,7 @@ var handler = module.exports = new nex.Handler('globalDependencies');
  */
 handler.do = function (pkg) {
   _.each(pkg.globalDependencies, function (version, name) {
-    this.log.info('npm install', nex.id(version, name));
+    log.info('npm install', nex.id(version, name));
     proc.spawnSync('npm', [ 'install', '-g', nex.id(version, name) ]);
   });
 };
@@ -21,7 +22,7 @@ handler.do = function (pkg) {
  */
 handler.undo = function (pkg) {
   _.each(pkg.globalDependencies, function (version, name) {
-    this.log.info('npm uninstall', nex.id(version, name));
+    log.info('npm uninstall', nex.id(version, name));
     proc.spawnSync('npm', [ 'uninstall', '-g', nex.id(version, name) ]);
   });
 };
