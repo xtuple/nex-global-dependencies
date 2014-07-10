@@ -1,0 +1,26 @@
+{
+  "name": "nex-global-dependencies",
+  "version": "0.0.1",
+  "description": "nex-global-dependencies ======================",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/tjwebb/nex-global-dependencies.git"
+  },
+  "keywords": [
+    "nex",
+    "globalDependencies",
+    "npm",
+    "build",
+    "compile"
+  ],
+  "author": "Travis Webb <me@traviswebb.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tjwebb/nex-global-dependencies/issues"
+  },
+  "homepage": "https://github.com/tjwebb/nex-global-dependencies"
+}
