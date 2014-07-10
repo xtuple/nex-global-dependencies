@@ -1,6 +1,6 @@
 {
   "name": "nex-global-dependencies",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "nex-global-dependencies ======================",
   "main": "index.js",
   "scripts": {
