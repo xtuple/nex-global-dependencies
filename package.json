@@ -22,5 +22,10 @@
   "bugs": {
     "url": "https://github.com/tjwebb/nex-global-dependencies/issues"
   },
-  "homepage": "https://github.com/tjwebb/nex-global-dependencies"
+  "homepage": "https://github.com/tjwebb/nex-global-dependencies",
+  "dependencies": {
+    "lodash": "^2.4.1",
+    "nex-api": "^2.0.0",
+    "npmlog": "^0.1.1"
+  }
 }
