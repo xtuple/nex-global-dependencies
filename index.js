@@ -10,6 +10,8 @@ var handler = module.exports = new nex.Handler('globalDependencies');
  * @override
  */
 handler.do = function (pkg) {
+  this.log.info(pkg);
+  this.log.info(this.field);
   _.each(pkg[this.field], function (version, name) {
     this.log.info('npm install', nex.id(version, name));
     proc.spawnSync('npm', [ 'install', '-g', nex.id(version, name) ]);
