@@ -10,9 +10,7 @@ var handler = module.exports = new nex.Handler('globalDependencies');
  * @override
  */
 handler.do = function (pkg) {
-  this.log.info(pkg);
-  this.log.info(this.field);
-  _.each(pkg[this.field], function (version, name) {
+  _.each(pkg.globalDependencies, function (version, name) {
     this.log.info('npm install', nex.id(version, name));
     proc.spawnSync('npm', [ 'install', '-g', nex.id(version, name) ]);
   });
@@ -22,7 +20,7 @@ handler.do = function (pkg) {
  * @override
  */
 handler.undo = function (pkg) {
-  _.each(pkg[this.field], function (version, name) {
+  _.each(pkg.globalDependencies, function (version, name) {
     this.log.info('npm uninstall', nex.id(version, name));
     proc.spawnSync('npm', [ 'uninstall', '-g', nex.id(version, name) ]);
   });
