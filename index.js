@@ -12,7 +12,7 @@ var handler = module.exports = new nex.Handler('globalDependencies');
  */
 handler.do = function (pkg) {
   _.each(pkg.globalDependencies, function (version, name) {
-    log.info('npm install', nex.id(version, name));
+    log.info('npm install -g', nex.id(version, name));
     proc.spawnSync('npm', [ 'install', '-g', nex.id(version, name) ]);
   });
 };
