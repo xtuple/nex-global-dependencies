@@ -14,7 +14,7 @@ var handler = module.exports = new nex.Handler('globalDependencies');
 handler.do = function (pkg) {
   _.each(pkg[this.field], function (version, name) {
     log.info('npm install -g', nex.id(version, name));
-    proc.spawnSync('npm', [ 'install', '-f', '-g', nex.id(version, name) ]);
+    proc.spawnSync('npm', [ 'install', '-g', nex.id(version, name) ]);
   }, this);
 };
 
@@ -24,6 +24,6 @@ handler.do = function (pkg) {
 handler.undo = function (pkg) {
   _.each(pkg[this.field], function (version, name) {
     log.info('npm uninstall', nex.id(version, name));
-    proc.spawnSync('npm', [ 'uninstall', '-f', '-g', nex.id(version, name) ]);
+    proc.spawnSync('npm', [ 'uninstall', '-g', nex.id(version, name) ]);
   }, this);
 };
