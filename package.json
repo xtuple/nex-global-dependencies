@@ -1,6 +1,6 @@
 {
   "name": "nex-global-dependencies",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "nex-global-dependencies ======================",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/tjwebb/nex-global-dependencies.git"
+    "url": "git://github.com/xtuple/nex-global-dependencies.git"
   },
   "keywords": [
     "nex",
@@ -20,12 +20,12 @@
   "author": "Travis Webb <me@traviswebb.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/tjwebb/nex-global-dependencies/issues"
+    "url": "https://github.com/xtuple/nex-global-dependencies/issues"
   },
   "engines": {
     "node": ">= 0.11.12"
   },
-  "homepage": "https://github.com/tjwebb/nex-global-dependencies",
+  "homepage": "https://github.com/xtuple/nex-global-dependencies",
   "dependencies": {
     "colors": "^0.6.2",
     "lodash": "^2.4.1",
